@@ -11,14 +11,14 @@
 		1775A957AEAB6332D33540F8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCE7CC001886793A0D02299 /* RootView.swift */; };
 		3A62C802684F9BA5858B39EB /* PaywallTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633AE2E50A52B27DB372BCF7 /* PaywallTypes.swift */; };
 		462AE2D80058027EA616727B /* DebugAnalyticsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CED46EE3040C808A282A36 /* DebugAnalyticsObserver.swift */; };
-		5E6706990C56E7C0C379F6B2 /* PaywallKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 11F764C4C24D5689DEB1389D /* PaywallKitUI */; };
 		6CDC4FF61C0F896F34F3CF37 /* OnboardingPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC45A626812DF3274343AE2 /* OnboardingPaywallView.swift */; };
 		8F77D4708AE9D9A2EA45C838 /* FeatureGatePaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD6BC2F9199F1229EF2F6B /* FeatureGatePaywallView.swift */; };
-		A95B8C53E98EDF7B4CB3EA38 /* PaywallKit in Frameworks */ = {isa = PBXBuildFile; productRef = 39AFCAA96E352153F577E26F /* PaywallKit */; };
 		B449EBCD1D63884948A112E8 /* MockRewardAdProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F922321011196400CDB1F3EB /* MockRewardAdProvider.swift */; };
 		B63F71E6EB7232B900F6F218 /* LogInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F671CFD293B282FE44AB26 /* LogInterceptor.swift */; };
 		DDD55C675C30A561D0C21EDC /* PaywallKitDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B3E2CA1FB3E8279CB31007 /* PaywallKitDemoApp.swift */; };
 		F3E46C29BAB0E5F1DC340321 /* SettingsPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E3DE988319057A4FDF869 /* SettingsPaywallView.swift */; };
+		FF6A98402F92303000139337 /* PaywallKit in Frameworks */ = {isa = PBXBuildFile; productRef = FF6A983F2F92303000139337 /* PaywallKit */; };
+		AABBCC342F92303000139337 /* PaywallKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = AABBCC332F92303000139337 /* PaywallKitUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		63F3F310A6785AF2DF5416D4 /* PaywallKitDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PaywallKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B8B10CA624D909FFCB0641 /* PaywallKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PaywallKit; path = ../..; sourceTree = SOURCE_ROOT; };
 		85AD6BC2F9199F1229EF2F6B /* FeatureGatePaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureGatePaywallView.swift; sourceTree = "<group>"; };
-		895B00A57FA3745A64030656 /* Products.storekit */ = {isa = PBXFileReference; path = Products.storekit; sourceTree = "<group>"; };
+		895B00A57FA3745A64030656 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 		9DCE7CC001886793A0D02299 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		BEC45A626812DF3274343AE2 /* OnboardingPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPaywallView.swift; sourceTree = "<group>"; };
 		C4F671CFD293B282FE44AB26 /* LogInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInterceptor.swift; sourceTree = "<group>"; };
@@ -41,8 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A95B8C53E98EDF7B4CB3EA38 /* PaywallKit in Frameworks */,
-				5E6706990C56E7C0C379F6B2 /* PaywallKitUI in Frameworks */,
+				FF6A98402F92303000139337 /* PaywallKit in Frameworks */,
+				AABBCC342F92303000139337 /* PaywallKitUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +116,8 @@
 			);
 			name = PaywallKitDemo;
 			packageProductDependencies = (
-				39AFCAA96E352153F577E26F /* PaywallKit */,
-				11F764C4C24D5689DEB1389D /* PaywallKitUI */,
+				FF6A983F2F92303000139337 /* PaywallKit */,
+				AABBCC332F92303000139337 /* PaywallKitUI */,
 			);
 			productName = PaywallKitDemo;
 			productReference = 63F3F310A6785AF2DF5416D4 /* PaywallKitDemo.app */;
@@ -148,7 +148,7 @@
 			mainGroup = 1479C077529B1ADFB7BFB600;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				7E303C442ECCCED7F6D6EC29 /* XCLocalSwiftPackageReference "../.." */,
+				FF6A983E2F92303000139337 /* XCLocalSwiftPackageReference "../../../PaywallKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B644C749C835B017DE5FDE89 /* Products */;
@@ -378,22 +378,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		7E303C442ECCCED7F6D6EC29 /* XCLocalSwiftPackageReference "../.." */ = {
+		FF6A983E2F92303000139337 /* XCLocalSwiftPackageReference "../../../PaywallKit" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../..;
+			relativePath = ../../../PaywallKit;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		11F764C4C24D5689DEB1389D /* PaywallKitUI */ = {
+		FF6A983F2F92303000139337 /* PaywallKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7E303C442ECCCED7F6D6EC29 /* XCLocalSwiftPackageReference "../.." */;
-			productName = PaywallKitUI;
-		};
-		39AFCAA96E352153F577E26F /* PaywallKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7E303C442ECCCED7F6D6EC29 /* XCLocalSwiftPackageReference "../.." */;
+			package = FF6A983E2F92303000139337 /* XCLocalSwiftPackageReference "../../../PaywallKit" */;
 			productName = PaywallKit;
+		};
+		AABBCC332F92303000139337 /* PaywallKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6A983E2F92303000139337 /* XCLocalSwiftPackageReference "../../../PaywallKit" */;
+			productName = PaywallKitUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

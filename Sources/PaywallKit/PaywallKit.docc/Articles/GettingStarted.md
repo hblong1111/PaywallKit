@@ -73,8 +73,8 @@ struct MyApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .environment(manager)
                 .paywallPresenter(registry: registry)
+                .environment(manager)
                 .task { await registerPaywalls() }
         }
     }
@@ -104,6 +104,8 @@ struct MyApp: App {
     }
 }
 ```
+
+> **Quan trọng — thứ tự modifier:** `.paywallPresenter(...)` phải nằm TRƯỚC `.environment(manager)`. Presenter modifier đọc `PaywallManager` từ environment; nếu `.environment(manager)` đặt phía trong, modifier sẽ không thấy được và app crash với *"No Observable object of type PaywallManager found."*
 
 ## 4. Vẽ UI paywall
 

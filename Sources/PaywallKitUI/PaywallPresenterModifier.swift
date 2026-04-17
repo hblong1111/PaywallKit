@@ -17,14 +17,19 @@ struct PaywallPresenterModifier: ViewModifier {
         content
             .sheet(item: sheetItem) { ctx in
                 paywallContent(for: ctx.type)
+                    .environment(manager)
                     .presentationDetents(mapDetents(ctx.detents))
             }
-            .modifier(FullScreenCoverFallback(item: fullScreenItem, content: paywallContent(for:)))
+            .modifier(FullScreenCoverFallback(item: fullScreenItem) { type in
+                paywallContent(for: type)
+                    .environment(manager)
+            })
             .overlay {
                 if let popup = popupContext {
                     PopupContainer(backdrop: popup.backdrop) {
                         paywallContent(for: popup.type)
                     }
+                    .environment(manager)
                     .transition(.opacity.combined(with: .scale(scale: 0.95)))
                     .animation(.spring(response: 0.35, dampingFraction: 0.85), value: popup.id)
                 }

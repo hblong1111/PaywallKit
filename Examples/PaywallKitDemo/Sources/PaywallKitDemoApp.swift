@@ -38,8 +38,8 @@ struct PaywallKitDemoApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .environment(manager)
                 .paywallPresenter(registry: registry)
+                .environment(manager)
                 .task { registerPaywalls() }
         }
     }

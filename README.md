@@ -57,8 +57,8 @@ struct MyApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .environment(manager)
                 .paywallPresenter(registry: registry)
+                .environment(manager)   // phải đặt SAU .paywallPresenter, không được đảo ngược
                 .task { setup() }
         }
     }
