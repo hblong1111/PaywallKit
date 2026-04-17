@@ -1,0 +1,51 @@
+name: PaywallKitDemo
+
+options:
+  bundleIdPrefix: com.paywallkit.demo
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: en
+  createIntermediateGroups: true
+  groupSortPosition: top
+
+packages:
+  PaywallKit:
+    path: ../..
+
+targets:
+  PaywallKitDemo:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Resources
+    dependencies:
+      - package: PaywallKit
+        product: PaywallKit
+      - package: PaywallKit
+        product: PaywallKitUI
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: PaywallKit Demo
+        UILaunchScreen:
+          UIColorName: ""
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.paywallkit.demo.app
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_VERSION: "6.0"
+        IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        ENABLE_PREVIEWS: YES
+    scheme:
+      storeKitConfiguration: Resources/Products.storekit
+      environmentVariables:
+        - variable: OS_ACTIVITY_MODE
+          value: disable
