@@ -9,19 +9,27 @@ Demo iOS app cho PaywallKit: 3 paywall type (fullscreen onboarding, popup featur
 - Simulator iOS 17+
 - (Khuyến khích) [XcodeGen](https://github.com/yonaskolb/XcodeGen) — cài qua Homebrew: `brew install xcodegen`.
 
-### Cách 1 — dùng XcodeGen (khuyến khích)
+### Cách 1 — mở thẳng project đã commit
+
+```bash
+open Examples/PaywallKitDemo/PaywallKitDemo.xcodeproj
+```
+
+Bản trong repo đã fix sẵn bug local-package của XcodeGen (xem cảnh báo bên dưới).
+
+### Cách 2 — regen bằng XcodeGen
 
 ```bash
 cd Examples/PaywallKitDemo
 xcodegen generate
+# ⚠️ Sau khi generate, XcodeGen emit pbxproj thiếu field `package = ...`
+# cho XCSwiftPackageProductDependency, làm Xcode báo "Missing package product 'PaywallKitUI'".
+# Chạy script patch:
+./fix-local-package.sh
 open PaywallKitDemo.xcodeproj
 ```
 
-Sau khi Xcode mở:
-- Chọn simulator iOS 17+.
-- Bấm ▶️ Run.
-
-Scheme đã config `Products.storekit` — purchase chạy local qua `StoreKit Test`, không cần App Store Connect.
+Scheme đã config `Products.storekit` — purchase chạy local qua StoreKit Test, không cần App Store Connect.
 
 ### Cách 2 — tạo Xcode project thủ công
 

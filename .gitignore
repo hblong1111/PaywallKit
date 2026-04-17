@@ -7,5 +7,4 @@ DerivedData/
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
 .claude/
-Examples/PaywallKitDemo/PaywallKitDemo.xcodeproj
 Examples/PaywallKitDemo/Info.plist
